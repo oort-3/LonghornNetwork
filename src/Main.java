@@ -15,12 +15,12 @@ public class Main {
             GaleShapley.assignRoommates(students);
 
             // Pod formation
-            StudentGraph graph = new StudentGraph(students);
-            PodFormation podFormation = new PodFormation(graph);
-            podFormation.formPods(4);
+            //StudentGraph graph = new StudentGraph(students);
+            //PodFormation podFormation = new PodFormation(graph);
+            //podFormation.formPods(4);
 
             // Referral path finding
-            ReferralPathFinder pathFinder = new ReferralPathFinder(graph);
+           // ReferralPathFinder pathFinder = new ReferralPathFinder(graph);
             // TODO: Implement user interaction for specifying a target company
 
         } catch (IOException e) {

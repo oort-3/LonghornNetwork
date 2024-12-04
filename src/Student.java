@@ -12,4 +12,7 @@ public abstract class Student {
 
     /** Return the connection strength to another Student based on their attributes */
     public abstract int calculateConnectionStrength(Student other);
+    public String toString(){
+        return "Name: " + name + "\nAge:" +age+ "\nGender: "+ gender+ "\nYear: "+year + "\nMajor: " + major + "\nGPA: " +gpa + "\nRoommatePref: " +roommatePreferences+"\nPrevIntern: " + previousInternships;
+    }
 }

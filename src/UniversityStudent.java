@@ -22,6 +22,10 @@ public class UniversityStudent extends Student {
 
     /** Return true if student is preferred as a roommate for this UniversityStudent */
     public boolean prefersRoommate(UniversityStudent student){
+        return false;
+    }
+    public int calculateConnectionStrength(Student other){
+     return 0;
     }
 }
 
