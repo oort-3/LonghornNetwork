@@ -23,9 +23,17 @@ class Node {
 public class StudentGraph {
     private Map<UniversityStudent, List<Node>> adjacencyList;
     private List<UniversityStudent> studentsList;
+    private Map<String, UniversityStudent> studentMap;
+
+
     public StudentGraph(List<UniversityStudent> students){
         adjacencyList = new HashMap<>();
+        studentMap = new HashMap<>();
         studentsList = students;
+
+        for(UniversityStudent student: studentsList){
+            studentMap.put(student.getName(), student);
+        }
         int current = 0;
         while(current < students.size()) {
             LinkedList<Node> nodeList = new LinkedList<>();
@@ -49,5 +57,9 @@ public class StudentGraph {
 
     public List<UniversityStudent> getStudentsList() {
         return studentsList;
+    }
+
+    public UniversityStudent getStudent(String name) {
+        return studentMap.get(name);
     }
 }

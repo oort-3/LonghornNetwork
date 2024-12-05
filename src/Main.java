@@ -25,9 +25,19 @@ public class Main {
                 System.out.println(s.getPodMembers());
             }
             // Referral path finding
-           // ReferralPathFinder pathFinder = new ReferralPathFinder(graph);
+            ReferralPathFinder pathFinder = new ReferralPathFinder(graph);
             // TODO: Implement user interaction for specifying a target company
+            List<UniversityStudent> s = pathFinder.findReferralPath(graph.getStudent("Timmy"), "FindMe");
+            if(null== s) System.out.println("no referral");
+            else System.out.println(s);
 
+            s = pathFinder.findReferralPath(graph.getStudent("Issac"), "FindMe");
+            if(null==s) System.out.println("no referral");
+            else System.out.println(s);
+
+            s = pathFinder.findReferralPath(graph.getStudent("Timmy"), "IDontExist");
+            if(null==s ) System.out.println("no referral");
+            else System.out.println(s);
         } catch (IOException e) {
             e.printStackTrace();
         }
