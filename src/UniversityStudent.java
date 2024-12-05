@@ -3,7 +3,7 @@ import java.util.*;
 public class UniversityStudent extends Student {
     // TODO: Constructor and additional methods to be implemented
     private List<UniversityStudent> podMembers;
-
+    private UniversityStudent roommate = null;
     /** Creates a UniversityStudent object with all specified attributes */
     public UniversityStudent(String name, int age, String gender,
                              int year, String major, double gpa,
@@ -26,6 +26,14 @@ public class UniversityStudent extends Student {
     }
     public int calculateConnectionStrength(Student other){
      return 0;
+    }
+
+    public UniversityStudent getRoommate() {
+        return roommate;
+    }
+
+    public void setRoommate(UniversityStudent roommate) {
+        this.roommate = roommate;
     }
 }
 

@@ -13,7 +13,10 @@ public class Main {
 
             // Roommate matching
             GaleShapley.assignRoommates(students);
-
+            for(UniversityStudent s : students){
+                if(s.getRoommate() == null) System.out.println(s.getName() +" has no roommate");
+                else System.out.println(s.getName() +" is roommates with "+s.getRoommate().getName());
+            }
             // Pod formation
             //StudentGraph graph = new StudentGraph(students);
             //PodFormation podFormation = new PodFormation(graph);

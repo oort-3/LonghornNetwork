@@ -15,4 +15,16 @@ public abstract class Student {
     public String toString(){
         return "Name: " + name + "\nAge:" +age+ "\nGender: "+ gender+ "\nYear: "+year + "\nMajor: " + major + "\nGPA: " +gpa + "\nRoommatePref: " +roommatePreferences+"\nPrevIntern: " + previousInternships;
     }
+
+    public List<String> getRoommatePreferences() {
+        return roommatePreferences;
+    }
+
+    public List<String> getPreviousInternships() {
+        return previousInternships;
+    }
+
+    public String getName() {
+        return name;
+    }
 }
