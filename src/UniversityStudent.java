@@ -24,8 +24,38 @@ public class UniversityStudent extends Student {
     public boolean prefersRoommate(UniversityStudent student){
         return false;
     }
+
+    public String getPodMembers() {
+        String names = "Pod Members: ";
+        for(UniversityStudent s: podMembers){
+            names += s.getName() + " ";
+        }
+        return names;
+    }
+
+    public void setPodMembers(List<UniversityStudent> podMembers) {
+        this.podMembers = podMembers;
+    }
+
     public int calculateConnectionStrength(Student other){
-     return 0;
+        int score = 0;
+        if (roommate != null && roommate.getName().equals(other.getName())){
+            score += 5;
+        }
+        for(String internship: previousInternships){
+            for (String otherInternship: other.previousInternships){
+                if(internship.equals(otherInternship)){
+                    score+=4;
+                }
+            }
+        }
+        if (major.equals(other.major)){
+            score += 3;
+        }
+        if(age==other.age){
+            score += 2;
+        }
+        return score;
     }
 
     public UniversityStudent getRoommate() {

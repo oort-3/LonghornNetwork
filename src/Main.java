@@ -18,10 +18,12 @@ public class Main {
                 else System.out.println(s.getName() +" is roommates with "+s.getRoommate().getName());
             }
             // Pod formation
-            //StudentGraph graph = new StudentGraph(students);
-            //PodFormation podFormation = new PodFormation(graph);
-            //podFormation.formPods(4);
-
+            StudentGraph graph = new StudentGraph(students);
+            PodFormation podFormation = new PodFormation(graph);
+            podFormation.formPods(4);
+            for(UniversityStudent s: students){
+                System.out.println(s.getPodMembers());
+            }
             // Referral path finding
            // ReferralPathFinder pathFinder = new ReferralPathFinder(graph);
             // TODO: Implement user interaction for specifying a target company
